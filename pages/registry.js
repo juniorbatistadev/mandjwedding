@@ -11,7 +11,8 @@ function Registry({ data }) {
         We have compiled a list of items that would be helpful as we start off
         our lives together. We have included links to show what type we are
         looking for, but does not need to be that specific item or brand! If you
-        chose to purchase something from this list, please "`check"` the box.
+        chose to purchase something from this list, please
+        `&quot;``check`&quot;`` the box.
       </p>
       <p>We hope this can be a useful resource to you! </p>
       <p>Thank you!</p>
