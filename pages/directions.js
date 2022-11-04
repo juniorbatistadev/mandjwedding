@@ -8,12 +8,12 @@ function Directions() {
       <div>
         <p>
           The Golden Horseshoe Inn is located at: 9 Golden Horseshoe Rd
-          Stanardsville, VA 22973 HELPFUL
+          Stanardsville, VA 22973
         </p>
         <p>
-          TIP: If using GPS / Navigation please type in our FULL street name
-          (there is also a Horseshoe Rd. in Stanardsville - so be sure not to
-          forget the "Golden" portion of our street name!)
+          HELPFUL TIP: If using GPS / Navigation please type in our FULL street
+          name (there is also a Horseshoe Rd. in Stanardsville - so be sure not
+          to forget the "Golden" portion of our street name!)
         </p>
         <p>
           FROM ROUTE 33 WEST: If you are traveling West on Route 33 - look for
