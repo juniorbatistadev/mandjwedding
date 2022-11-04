@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "add-to-calendar-button": "^1.18.5",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
+    "googleapis": "^100.0.0",
     "next": "13.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-moment": "^1.1.2"
   }
 }

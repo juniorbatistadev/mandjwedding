@@ -1,0 +1,36 @@
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  padding: 8px 8px 6px;
+  margin: 0px 10px;
+  font-family: "Unna", serif;
+  color: #130c0e;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.menu li:hover {
+  cursor: pointer;
+  border-bottom: #c2a999 solid 2px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #130c0e;
+}
+
+.menu .active {
+  border-bottom: #cd5909 solid 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+  }
+}
