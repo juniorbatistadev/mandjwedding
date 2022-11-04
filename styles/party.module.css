@@ -1,0 +1,50 @@
+.sectionTitle {
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.name {
+  font-size: 32px;
+  font-family: "Tangerine", cursive;
+  color: #505a46;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.groommen {
+  margin-left: 100px;
+}
+
+.sections {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .groommen {
+    margin-left: 0px;
+  }
+
+  .sections {
+    flex-direction: column;
+  }
+}
