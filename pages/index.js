@@ -132,7 +132,7 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          <p className={styles.start}>Let &apos;`s start the adventure!</p>
+          <p className={styles.start}>Let &apos;s start the adventure!</p>
           <p style={{ color: "white", fontSize: 22 }}>
             {TotalDays} days until the wedding!
           </p>
