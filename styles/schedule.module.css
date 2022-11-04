@@ -1,0 +1,18 @@
+.event {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.time {
+  font-size: 40px;
+  font-family: "Tangerine", cursive;
+  color: #505a46;
+}
+
+.name {
+  font-size: 27px;
+  margin-left: 10px;
+  color: #505a46;
+  text-transform: uppercase;
+}
