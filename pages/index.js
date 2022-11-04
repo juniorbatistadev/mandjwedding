@@ -132,30 +132,27 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          <p className={styles.start}>Let`&apos;`s start the adventure!</p>
+          <p className={styles.start}>Let &apos;`s start the adventure!</p>
           <p style={{ color: "white", fontSize: 22 }}>
             {TotalDays} days until the wedding!
           </p>
           <div className="atcb">
             {"{"}
-            `&quot;`name`&quot;`:`&quot;`Madeline and Junior Wedding`&quot;`,
-            `&quot;`description`&quot;`:`&quot;`Madeline and Junior are starting
-            their lives together.`&quot;`,
-            `&quot;`startDate`&quot;`:`&quot;`2023-04-23`&quot;`,
-            `&quot;`endDate`&quot;`:`&quot;`2023-04-23`&quot;`,
-            `&quot;`startTime`&quot;`:`&quot;`13:05`&quot;`,
-            `&quot;`endTime`&quot;`:`&quot;`18:00`&quot;`,
-            `&quot;`location`&quot;`:`&quot;`STANARDSVILLE, VA`&quot;`,
-            `&quot;`label`&quot;`:`&quot;`Add to Calendar`&quot;`,
-            `&quot;`options`&quot;`:[ `&quot;`Apple`&quot;`,
-            `&quot;`Google`&quot;`, `&quot;`iCal`&quot;`,
-            `&quot;`Microsoft365`&quot;`, `&quot;`MicrosoftTeams`&quot;`,
-            `&quot;`Outlook.com`&quot;`, `&quot;`Yahoo`&quot;` ],
-            `&quot;`timeZone`&quot;`:`&quot;`EST`&quot;`,
-            `&quot;`trigger`&quot;`:`&quot;`click`&quot;`,
-            `&quot;`inline`&quot;`:true,
-            `&quot;`listStyle`&quot;`:`&quot;`modal`&quot;`,
-            `&quot;`iCalFileName`&quot;`:`&quot;`Reminder-Event`&quot;`
+            &quot;name&quot;:&quot;Madeline and Junior Wedding&quot;,
+            &quot;description&quot;:&quot;Madeline and Junior are starting their
+            lives together.&quot;, &quot;startDate&quot;:&quot;2023-04-23&quot;,
+            &quot;endDate&quot;:&quot;2023-04-23&quot;,
+            &quot;startTime&quot;:&quot;13:05&quot;,
+            &quot;endTime&quot;:&quot;18:00&quot;,
+            &quot;location&quot;:&quot;STANARDSVILLE, VA&quot;,
+            &quot;label&quot;:&quot;Add to Calendar&quot;, &quot;options&quot;:[
+            &quot;Apple&quot;, &quot;Google&quot;, &quot;iCal&quot;,
+            &quot;Microsoft365&quot;, &quot;MicrosoftTeams&quot;,
+            &quot;Outlook.com&quot;, &quot;Yahoo&quot; ],
+            &quot;timeZone&quot;:&quot;EST&quot;,
+            &quot;trigger&quot;:&quot;click&quot;, &quot;inline&quot;:true,
+            &quot;listStyle&quot;:&quot;modal&quot;,
+            &quot;iCalFileName&quot;:&quot;Reminder-Event&quot;
             {"}"}
           </div>
         </div>
