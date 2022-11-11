@@ -54,7 +54,7 @@ export default function Home() {
             <a
               href="https://www.ywamsanpedro.org"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               YWAM (Youth With A Mission)
             </a>
