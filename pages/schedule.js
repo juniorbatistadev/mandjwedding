@@ -8,28 +8,36 @@ function Schedule() {
       <Title text="Schedule" />
       <div>
         <div className={styles.event}>
-          <p className={styles.time}>1:00 pm</p>
-          <p className={styles.name}>Ceremony</p>
+          <p className={styles.time}>1:30 pm</p>
+          <p className={styles.name}>Ceremony begins</p>
+        </div>
+        <div className={styles.event}>
+          <p className={styles.time}>1:50 pm</p>
+          <p className={styles.name}>Ceremony concludes</p>
         </div>
         <div className={styles.event}>
           <p className={styles.time}>2:00 pm</p>
-          <p className={styles.name}>Happy Hour</p>
+          <p className={styles.name}>Social Hour</p>
         </div>
         <div className={styles.event}>
           <p className={styles.time}>3:00 pm</p>
-          <p className={styles.name}>First Dance</p>
+          <p className={styles.name}>Light Refreshments</p>
         </div>
         <div className={styles.event}>
           <p className={styles.time}>4:00 pm</p>
-          <p className={styles.name}>Speaches</p>
+          <p className={styles.name}>Toast</p>
         </div>
         <div className={styles.event}>
-          <p className={styles.time}>5:00 pm</p>
+          <p className={styles.time}>4:10 pm</p>
           <p className={styles.name}>Cake Cutting</p>
         </div>
         <div className={styles.event}>
+          <p className={styles.time}>4:15 pm</p>
+          <p className={styles.name}>First Dance</p>
+        </div>
+        <div className={styles.event}>
           <p className={styles.time}>6:00 pm</p>
-          <p className={styles.name}>Send off</p>
+          <p className={styles.name}>Send Off</p>
         </div>
       </div>
     </div>
