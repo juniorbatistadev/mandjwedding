@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "../src/components/Slider";
 import Title from "../src/components/Title";
 import styles from "../styles/schedule.module.css";
 
@@ -40,6 +41,7 @@ function Schedule() {
           <p className={styles.name}>Send Off</p>
         </div>
       </div>
+      <Slider />
     </div>
   );
 }
