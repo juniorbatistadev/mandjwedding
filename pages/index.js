@@ -51,7 +51,11 @@ export default function Home() {
             asking, prayer, and conversations, she felt God leading her to a
             “gap year”, before college. She waded through dozens of different
             programs until finding
-            <a href="https://www.ywamsanpedro.org" target="_blank">
+            <a
+              href="https://www.ywamsanpedro.org"
+              target="_blank"
+              rel="noopener"
+            >
               YWAM (Youth With A Mission)
             </a>
             , leading her to the base in San Pedro, Dominican Republic

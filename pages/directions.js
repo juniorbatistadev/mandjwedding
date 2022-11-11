@@ -18,18 +18,19 @@ function Directions() {
         >
           <b>HELPFUL TIP:</b> If using GPS / Navigation please type in our FULL
           street name (there is also a Horseshoe Rd. in Stanardsville - so be
-          sure not to forget the "Golden" portion of our street name!)
+          sure not to forget the &quot;Golden&quot; portion of our street name!)
         </p>
         <p className={styles.text} style={{ fontSize: 22, marginBottom: 30 }}>
           <b>FROM ROUTE 33 WEST:</b> If you are traveling West on Route 33 -
           look for the Lydia Log Cabin building on your LEFT with the RED TIN
           ROOF - we are the very next LEFT on ROUTE 625. If you pass a sign that
-          says "Now Entering Shenandoah National Park" you have gone too far.
+          says &quot;Now Entering Shenandoah National Park&quot; you have gone
+          too far.
         </p>
         <p className={styles.text} style={{ fontSize: 22 }}>
           <b>FROM ROUTE 33 EAST:</b> If you are heading East on Route 33 we are
           the first RIGHT after coming down the mountains and passing the sign
-          that says "Now Leaving Shenandoah National Park"
+          that says &quot;Now Leaving Shenandoah National Park&quot;
         </p>
         <p
           className={styles.text}

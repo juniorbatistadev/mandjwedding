@@ -6,7 +6,7 @@ function Schedule() {
   return (
     <div style={{ maxWidth: 1000 }}>
       <Title text="Schedule" />
-      <div>
+      <div style={{ marginBottom: 60, marginTop: 30 }}>
         <div className={styles.event}>
           <p className={styles.time}>1:30 pm</p>
           <p className={styles.name}>Ceremony begins</p>
