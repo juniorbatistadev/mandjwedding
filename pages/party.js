@@ -4,7 +4,7 @@ import styles from "../styles/party.module.css";
 
 function Party() {
   return (
-    <div>
+    <div style={{ maxWidth: 1000 }}>
       <Title text="Bridal Party" />
       <div
         style={{

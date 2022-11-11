@@ -8,6 +8,11 @@ html {
   padding: 0px;
 }
 
+a {
+  margin: 0px 5px;
+  color: #505a46;
+}
+
 body {
   font-family: "Unna", serif;
   color: #130c0e;

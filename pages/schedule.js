@@ -4,7 +4,7 @@ import styles from "../styles/schedule.module.css";
 
 function Schedule() {
   return (
-    <div>
+    <div style={{ maxWidth: 1000 }}>
       <Title text="Schedule" />
       <div>
         <div className={styles.event}>

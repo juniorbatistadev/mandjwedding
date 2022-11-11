@@ -65,13 +65,18 @@
   display: flex;
   align-items: center;
   font-size: 32px;
-  padding: 20px;
+  padding: 17px;
+  border-radius: 10px;
 }
 
 .iconOption:hover {
   background-color: #9daf89;
+  color: white;
 }
 
+.iconOption:hover a {
+  color: white;
+}
 .iconOption a {
   text-decoration: none;
   color: #505a46;

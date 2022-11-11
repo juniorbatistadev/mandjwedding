@@ -5,7 +5,7 @@ import { google } from "googleapis";
 function Registry({ data }) {
   console.log(data);
   return (
-    <div>
+    <div style={{ maxWidth: 1000 }}>
       <Title text="Registry" />
       <p>
         We have compiled a list of items that would be helpful as we start off
