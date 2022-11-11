@@ -32,7 +32,7 @@ function Party() {
               className={styles.avatar}
               src="https://d44ri6pmeripj.cloudfront.net/morilee/wp-content/uploads/2022/04/05173554/product_img_21791_gallery_img_1-scaled.jpg"
             />
-            <p className={styles.name}>Rachel Hegdhal</p>
+            <p className={styles.name}>Jaima DeWitt</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
           <div className={styles.person}>
@@ -48,9 +48,10 @@ function Party() {
               className={styles.avatar}
               src="https://d44ri6pmeripj.cloudfront.net/morilee/wp-content/uploads/2022/04/05173554/product_img_21791_gallery_img_1-scaled.jpg"
             />
-            <p className={styles.name}>Jaima DeWitt</p>
+            <p className={styles.name}>Rachel Hegdhal</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
+
           <div className={styles.person}>
             <img
               className={styles.avatar}
@@ -83,14 +84,6 @@ function Party() {
               className={styles.avatar}
               src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
             />
-            <p className={styles.name}>David Kody</p>
-            <p className={styles.job}>Groomsmen</p>
-          </div>
-          <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
-            />
             <p className={styles.name}>Branden Dahlberg</p>
             <p className={styles.job}>Groomsmen</p>
           </div>
@@ -100,6 +93,14 @@ function Party() {
               src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
             />
             <p className={styles.name}>Breylon Miller</p>
+            <p className={styles.job}>Groomsmen</p>
+          </div>
+          <div className={styles.person}>
+            <img
+              className={styles.avatar}
+              src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
+            />
+            <p className={styles.name}>David Kody</p>
             <p className={styles.job}>Groomsmen</p>
           </div>
         </div>
