@@ -18,8 +18,8 @@ function Slider() {
       autoplay={true}
       withoutControls={true}
     >
-      {images.map((image) => (
-        <img src={image} className={styles.image} />
+      {images.map((image, index) => (
+        <img src={image} className={styles.image} key={index} />
       ))}
     </Carousel>
     // </div>
