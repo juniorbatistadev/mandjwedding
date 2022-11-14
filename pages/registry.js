@@ -25,8 +25,9 @@ function Registry({ data }) {
       <div
         style={{ display: "flex", flexWrap: "wrap", marginTop: 60, gap: 40 }}
       >
-        {data.map((item) => (
+        {data.map((item, index) => (
           <div
+            key={index}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -42,7 +43,7 @@ function Registry({ data }) {
                 src={Array.isArray(item.images) ? item.images[0] : item.images}
               />
             ) : null}
-            <h2>{item.name}</h2>
+            <h2 style={{ marginTop: 10 }}>{item.name}</h2>
           </div>
         ))}
       </div>
