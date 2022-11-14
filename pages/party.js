@@ -28,35 +28,23 @@ function Party() {
             <p className={styles.job}>Bridemaid</p>
           </div>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://d44ri6pmeripj.cloudfront.net/morilee/wp-content/uploads/2022/04/05173554/product_img_21791_gallery_img_1-scaled.jpg"
-            />
+            <img className={styles.avatar} src="/party/jaima.jpg" />
             <p className={styles.name}>Jaima DeWitt</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://d44ri6pmeripj.cloudfront.net/morilee/wp-content/uploads/2022/04/05173554/product_img_21791_gallery_img_1-scaled.jpg"
-            />
+            <img className={styles.avatar} src="/party/ana.jpg" />
             <p className={styles.name}>Anna Bower</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://d44ri6pmeripj.cloudfront.net/morilee/wp-content/uploads/2022/04/05173554/product_img_21791_gallery_img_1-scaled.jpg"
-            />
+            <img className={styles.avatar} src="/party/rachel.jpg" />
             <p className={styles.name}>Rachel Hegdhal</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
 
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://d44ri6pmeripj.cloudfront.net/morilee/wp-content/uploads/2022/04/05173554/product_img_21791_gallery_img_1-scaled.jpg"
-            />
+            <img className={styles.avatar} src="/party/joana.jpg" />
             <p className={styles.name}>Joanna Erwin</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
@@ -64,10 +52,7 @@ function Party() {
         <div className={styles.section + " " + styles.groommen}>
           <h2 className={styles.sectionTitle}>Groomsmen</h2>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://scontent.fhex4-1.fna.fbcdn.net/v/t1.6435-9/97795766_235364401222613_3788460716155994112_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_eui2=AeHBg6G3mVmEMBo4sW8MSzRv_tPC4pyvP1_-08LinK8_X4NFZ0LqYQvDQzCDr5hU4U63BJWX_4KlJlTi1xCDYJnE&_nc_ohc=cKe3r1Eb65cAX8mvUig&_nc_ht=scontent.fhex4-1.fna&oh=00_AfDLWcQ6ar24O_aqQN_jYUNKWlHFRkfWrtwbcvs9F2rZEA&oe=638D045D"
-            />
+            <img className={styles.avatar} src="/party/jose.jpg" />
             <p className={styles.name}>Jose Angel</p>
             <p className={styles.job}>Bestman</p>
           </div>
@@ -80,10 +65,7 @@ function Party() {
             <p className={styles.job}>Groomsmen</p>
           </div>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
-            />
+            <img className={styles.avatar} src="/party/branden.jpg" />
             <p className={styles.name}>Branden Dahlberg</p>
             <p className={styles.job}>Groomsmen</p>
           </div>
@@ -96,10 +78,7 @@ function Party() {
             <p className={styles.job}>Groomsmen</p>
           </div>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
-            />
+            <img className={styles.avatar} src="/party/david.jpg" />
             <p className={styles.name}>David Kody</p>
             <p className={styles.job}>Groomsmen</p>
           </div>
