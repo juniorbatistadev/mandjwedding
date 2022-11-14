@@ -1,9 +1,108 @@
 import React from "react";
 import Title from "../src/components/Title";
 import { google } from "googleapis";
+import styles from "../styles/registry.module.css";
+
+function Item({ item }) {
+  console.log(item);
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        background: "#f3f3f3",
+        padding: 20,
+        borderRadius: 10,
+      }}
+    >
+      {item.images ? (
+        <img
+          style={{
+            borderRadius: 10,
+            width: "100%",
+            height: 120,
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+          src={Array.isArray(item.images) ? item.images[0] : item.images}
+        />
+      ) : null}
+      <button
+        style={{
+          marginTop: 20,
+          padding: 10,
+          borderRadius: 10,
+          background: "#fff",
+          border: "none",
+          background: "#505a46",
+          color: "#fff",
+          fontSize: 17,
+          cursor: "pointer",
+        }}
+      >
+        Mark as Bought
+      </button>
+      <div style={{ marginTop: 20 }}>
+        {item.amazonLink && (
+          <a target="_blank" rel="noreferrer" href={item.amazonLink}>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png"
+              style={{ width: 27 }}
+            />
+          </a>
+        )}
+        {item.amazonLink2 && (
+          <a target="_blank" rel="noreferrer" href={item.amazonLink}>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png"
+              style={{ width: 27 }}
+            />
+          </a>
+        )}
+        {item.targetLink && (
+          <a target="_blank" rel="noreferrer" href={item.targetLink}>
+            {" "}
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Target_Corporation_logo_%28vector%29.svg/1200px-Target_Corporation_logo_%28vector%29.svg.png"
+              style={{ width: 27 }}
+            />
+          </a>
+        )}
+        {item.targetLink2 && (
+          <a target="_blank" rel="noreferrer" href={item.targetLink2}>
+            {" "}
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Target_Corporation_logo_%28vector%29.svg/1200px-Target_Corporation_logo_%28vector%29.svg.png"
+              style={{ width: 27 }}
+            />
+          </a>
+        )}
+        {item.otherLink && (
+          <a target="_blank" rel="noreferrer" href={item.otherLink}>
+            {" "}
+            <img
+              src="https://w7.pngwing.com/pngs/981/939/png-transparent-hyperlink-computer-icons-direct-link-others-miscellaneous-text-logo.png"
+              style={{ width: 27 }}
+            />
+          </a>
+        )}
+        {item.otherLink2 && (
+          <a href={item.otherLink2}>
+            <img
+              src="https://w7.pngwing.com/pngs/981/939/png-transparent-hyperlink-computer-icons-direct-link-others-miscellaneous-text-logo.png"
+              style={{ width: 27 }}
+            />
+          </a>
+        )}
+      </div>
+
+      <h2 style={{ marginTop: 10, wordBreak: "break-word" }}>{item.name}</h2>
+      <p>{item.description}</p>
+    </div>
+  );
+}
 
 function Registry({ data }) {
-  console.log(data);
   return (
     <div style={{ maxWidth: 1000 }}>
       <Title text="Registry" />
@@ -23,28 +122,17 @@ function Registry({ data }) {
       </p>
 
       <div
-        style={{ display: "flex", flexWrap: "wrap", marginTop: 60, gap: 40 }}
+        className={styles.container}
+        style={{
+          display: "grid",
+          marginTop: 60,
+          gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+          gridGap: 20,
+          width: "100%",
+        }}
       >
         {data.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: 150,
-              background: "#f3f3f3",
-              padding: 20,
-              borderRadius: 10,
-            }}
-          >
-            {item.images ? (
-              <img
-                style={{ borderRadius: 10 }}
-                src={Array.isArray(item.images) ? item.images[0] : item.images}
-              />
-            ) : null}
-            <h2 style={{ marginTop: 10 }}>{item.name}</h2>
-          </div>
+          <Item key={index} item={item} />
         ))}
       </div>
     </div>
