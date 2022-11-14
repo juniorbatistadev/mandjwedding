@@ -19,6 +19,8 @@ import { GrGroup } from "react-icons/gr";
 import { SlCalender } from "react-icons/sl";
 import { GiDirectionSign } from "react-icons/gi";
 import { HiOutlineClipboardList } from "react-icons/hi";
+import { CgMailOpen } from "react-icons/cg";
+import { RiLiveLine } from "react-icons/ri";
 
 export default function Home() {
   let date = new Date("2023-04-23");
@@ -193,8 +195,16 @@ export default function Home() {
           <Link href={"/directions"}>Directions</Link>
         </div>
         <div className={styles.iconOption}>
+          <CgMailOpen />
+          <Link href={"/rsvp"}>RSVP</Link>
+        </div>
+        <div className={styles.iconOption}>
           <HiOutlineClipboardList />
           <Link href={"/registry"}>Registry</Link>
+        </div>
+        <div className={styles.iconOption}>
+          <RiLiveLine />
+          <Link href={"/livestream"}>Livestream</Link>
         </div>
       </div>
       <div

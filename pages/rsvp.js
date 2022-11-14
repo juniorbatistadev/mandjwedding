@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Title from "../src/components/Title";
 // import styles from "../styles/rsvp.module.css";
 

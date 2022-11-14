@@ -10,9 +10,9 @@ function Menu() {
       <li className={router.pathname == "/" ? styles.active : ""}>
         <Link href="/">Home</Link>
       </li>
-      <li className={router.pathname == "/#ourstory" ? styles.active : ""}>
+      {/* <li className={router.pathname == "/#ourstory" ? styles.active : ""}>
         <Link href="/#ourstory">Our Story</Link>
-      </li>
+      </li> */}
       <li className={router.pathname == "/party" ? styles.active : ""}>
         <Link href="/party">Bridal Party</Link>
       </li>
@@ -27,6 +27,9 @@ function Menu() {
       </li>
       <li className={router.pathname == "/registry" ? styles.active : ""}>
         <Link href="/registry">Registry</Link>
+      </li>
+      <li className={router.pathname == "/livestream" ? styles.active : ""}>
+        <Link href="/livestream">Livestream</Link>
       </li>
     </ul>
   );
