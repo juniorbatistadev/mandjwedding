@@ -7,15 +7,45 @@ function Registry({ data }) {
   return (
     <div style={{ maxWidth: 1000 }}>
       <Title text="Registry" />
-      <p>
+      <p style={{ fontSize: 22, textAlign: "center", marginTop: 10 }}>
         We have compiled a list of items that would be helpful as we start off
         our lives together. We have included links to show what type we are
         looking for, but does not need to be that specific item or brand! If you
-        chose to purchase something from this list, please
-        `&quot;``check`&quot;`` the box.
+        chose to purchase something from this list, please &quot;check&quot; the
+        box.
       </p>
-      <p>We hope this can be a useful resource to you! </p>
-      <p>Thank you!</p>
+      <p style={{ fontSize: 22 }}>
+        We hope this can be a useful resource to you!{" "}
+      </p>
+      <p style={{ fontSize: 22 }}>Thank you!</p>
+      <p style={{ fontSize: 22, marginTop: 20, fontWeight: "bold" }}>
+        DIS: IM STILL WORKING ON THIS, LOVE YOU!!!!
+      </p>
+
+      <div
+        style={{ display: "flex", flexWrap: "wrap", marginTop: 60, gap: 40 }}
+      >
+        {data.map((item) => (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: 150,
+              background: "#f3f3f3",
+              padding: 20,
+              borderRadius: 10,
+            }}
+          >
+            {item.images ? (
+              <img
+                style={{ borderRadius: 10 }}
+                src={Array.isArray(item.images) ? item.images[0] : item.images}
+              />
+            ) : null}
+            <h2>{item.name}</h2>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
