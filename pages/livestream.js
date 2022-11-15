@@ -8,10 +8,10 @@ function Livestream() {
       <Title text="Livestream" />
       <iframe
         style={{ marginBottom: 40, marginTop: 40 }}
-        width="1024"
+        width="100%"
         height="576"
-        src="https://www.youtube.com/embed/1z_STdEOocc"
-        title="Wedding M&J"
+        src="https://www.youtube.com/embed/oYPecFRcEbo"
+        title="Madeline & Junior Wedding"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
