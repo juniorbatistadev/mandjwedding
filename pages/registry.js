@@ -2,9 +2,52 @@ import React from "react";
 import Title from "../src/components/Title";
 import { google } from "googleapis";
 import styles from "../styles/registry.module.css";
+import MySwal from "../src/components/Swal";
+import Swal from "sweetalert2";
 
 function Item({ item }) {
-  console.log(item);
+  const { row, checked } = item;
+  const handleClick = async () => {
+    const { value: formValues } = await MySwal.fire({
+      title: <p>Mark &quot;`{name}&quot;` as bought.</p>,
+      html:
+        '<input id="swal-input1" class="swal2-input" placeholder="Your name" type="text">' +
+        '<input id="swal-input2" class="swal2-input" placeholder="Your email" type="email">',
+      focusConfirm: false,
+      showCancelButton: true,
+      showConfirmButton: true,
+      confirmButtonText: "Save As Checked",
+      confirmButtonColor: "#571F31",
+      preConfirm: () => {
+        return [
+          document.getElementById("swal-input1").value,
+          document.getElementById("swal-input2").value,
+        ];
+      },
+    });
+
+    if (formValues) {
+      //validate data
+      if (!formValues[0] || !/\S+@\S+\.\S+/.test(formValues[1])) {
+        Swal.fire({
+          icon: "error",
+          html: "Please enter a valid email and name",
+        });
+
+        return;
+      }
+
+      await fetch(
+        `/api/hello?name=${formValues[0]}&email=${formValues[1]}&row=${row}`
+      ).then(() =>
+        Swal.fire({
+          icon: "success",
+          html: "Checked",
+        })
+      );
+    }
+  };
+
   return (
     <div
       style={{
@@ -32,15 +75,16 @@ function Item({ item }) {
           marginTop: 20,
           padding: 10,
           borderRadius: 10,
-          background: "#fff",
           border: "none",
-          background: "#505a46",
-          color: "#fff",
+          background: checked ? "#ddd" : "#505a46",
+          color: checked ? "#444" : "#fff",
           fontSize: 17,
-          cursor: "pointer",
+          cursor: checked ? "auto" : "pointer",
         }}
+        disabled={checked}
+        onClick={handleClick}
       >
-        Mark as Bought
+        {checked ? "Bought" : "Mark as Bought"}
       </button>
       <div style={{ marginTop: 20 }}>
         {item.amazonLink && (
@@ -96,7 +140,16 @@ function Item({ item }) {
         )}
       </div>
 
-      <h2 style={{ marginTop: 10, wordBreak: "break-word" }}>{item.name}</h2>
+      <h2
+        style={{
+          marginTop: 10,
+          wordBreak: "break-word",
+          color: checked ? "#999" : "#000",
+          textDecoration: checked ? "line-through" : "none",
+        }}
+      >
+        {item.name}
+      </h2>
       <p>{item.description}</p>
     </div>
   );
@@ -118,7 +171,7 @@ function Registry({ data }) {
       </p>
       <p style={{ fontSize: 22 }}>Thank you!</p>
       <p style={{ fontSize: 22, marginTop: 20, fontWeight: "bold" }}>
-        DIS: IM STILL WORKING ON THIS, LOVE YOU!!!!
+        Ship to: 987 Smith Ave. Harrisonburg VA 22802
       </p>
 
       <div
