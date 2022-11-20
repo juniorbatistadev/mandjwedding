@@ -1,236 +1,239 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import styles from "./index.module.css";
+import { FaBackspace } from "react-icons/fa";
+
+// const wordsLib = ["YWAM", "JUCUM", "LOVE", "AMOR", "BRIDE", "GROOM"];
+const wordsLib = [
+  "ABUSE",
+  "ADULT",
+  "AGENT",
+  "ANGER",
+  "APPLE",
+  "AWARD",
+  "BASIS",
+  "BEACH",
+  "BIRTH",
+  "BLOCK",
+  "BLOOD",
+  "BOARD",
+  "BRAIN",
+  "BREAD",
+  "BREAK",
+  "BROWN",
+  "BUYER",
+  "CAUSE",
+  "CHAIN",
+  "CHAIR",
+  "CHEST",
+  "CHIEF",
+  "CHILD",
+  "CHINA",
+  "CLAIM",
+  "CLASS",
+  "CLOCK",
+  "COACH",
+  "COAST",
+  "COURT",
+  "COVER",
+  "CREAM",
+  "CRIME",
+  "CROSS",
+  "CROWD",
+  "CROWN",
+  "CYCLE",
+  "DANCE",
+  "DEATH",
+  "DEPTH",
+  "DOUBT",
+  "DRAFT",
+  "DRAMA",
+  "DREAM",
+  "DRESS",
+  "DRINK",
+  "DRIVE",
+  "EARTH",
+  "ENEMY",
+  "ENTRY",
+  "ERROR",
+  "EVENT",
+  "FAITH",
+  "FAULT",
+  "FIELD",
+  "FIGHT",
+  "FINAL",
+  "FLOOR",
+  "FOCUS",
+  "FORCE",
+  "FRAME",
+  "FRANK",
+  "FRONT",
+  "FRUIT",
+  "GLASS",
+  "GRANT",
+  "GRASS",
+  "GREEN",
+  "GROUP",
+  "GUIDE",
+  "HEART",
+  "HENRY",
+  "HORSE",
+  "HOTEL",
+  "HOUSE",
+  "IMAGE",
+  "INDEX",
+  "INPUT",
+  "ISSUE",
+  "JAPAN",
+  "JONES",
+  "JUDGE",
+  "KNIFE",
+  "LAURA",
+  "LAYER",
+  "LEVEL",
+  "LEWIS",
+  "LIGHT",
+  "LIMIT",
+  "LUNCH",
+  "MAJOR",
+  "MARCH",
+  "MATCH",
+  "METAL",
+  "MODEL",
+  "MONEY",
+  "MONTH",
+  "MOTOR",
+  "MOUTH",
+  "MUSIC",
+  "NIGHT",
+  "NOISE",
+  "NORTH",
+  "NOVEL",
+  "NURSE",
+  "OFFER",
+  "ORDER",
+  "OTHER",
+  "OWNER",
+  "PANEL",
+  "PAPER",
+  "PARTY",
+  "PEACE",
+  "PETER",
+  "PHASE",
+  "PHONE",
+  "PIECE",
+  "PILOT",
+  "PITCH",
+  "PLACE",
+  "PLANE",
+  "PLANT",
+  "PLATE",
+  "POINT",
+  "POUND",
+  "POWER",
+  "PRESS",
+  "PRICE",
+  "PRIDE",
+  "PRIZE",
+  "PROOF",
+  "QUEEN",
+  "RADIO",
+  "RANGE",
+  "RATIO",
+  "REPLY",
+  "RIGHT",
+  "RIVER",
+  "ROUND",
+  "ROUTE",
+  "RUGBY",
+  "SCALE",
+  "SCENE",
+  "SCOPE",
+  "SCORE",
+  "SENSE",
+  "SHAPE",
+  "SHARE",
+  "SHEEP",
+  "SHEET",
+  "SHIFT",
+  "SHIRT",
+  "SHOCK",
+  "SIGHT",
+  "SIMON",
+  "SKILL",
+  "SLEEP",
+  "SMILE",
+  "SMITH",
+  "SMOKE",
+  "SOUND",
+  "SOUTH",
+  "SPACE",
+  "SPEED",
+  "SPITE",
+  "SPORT",
+  "SQUAD",
+  "STAFF",
+  "STAGE",
+  "START",
+  "STATE",
+  "STEAM",
+  "STEEL",
+  "STOCK",
+  "STONE",
+  "STORE",
+  "STUDY",
+  "STUFF",
+  "STYLE",
+  "SUGAR",
+  "TABLE",
+  "TASTE",
+  "TERRY",
+  "THEME",
+  "THING",
+  "TITLE",
+  "TOTAL",
+  "TOUCH",
+  "TOWER",
+  "TRACK",
+  "TRADE",
+  "TRAIN",
+  "TREND",
+  "TRIAL",
+  "TRUST",
+  "TRUTH",
+  "UNCLE",
+  "UNION",
+  "UNITY",
+  "VALUE",
+  "VIDEO",
+  "VISIT",
+  "VOICE",
+  "WASTE",
+  "WATCH",
+  "WATER",
+  "WHILE",
+  "WHITE",
+  "WHOLE",
+  "WOMAN",
+  "WORLD",
+  "YOUTH",
+];
 
 function Wordle() {
   const [selected, setSelected] = useState("");
   const [isOver, setIsOver] = useState(false);
   const [currentWord, setCurrentWord] = useState("");
   const [wordsUsed, setWordsUsed] = useState([]);
-
-  // const words = ["YWAM", "JUCUM", "LOVE", "AMOR", "BRIDE", "GROOM"];
-  const words = [
-    "ABUSE",
-    "ADULT",
-    "AGENT",
-    "ANGER",
-    "APPLE",
-    "AWARD",
-    "BASIS",
-    "BEACH",
-    "BIRTH",
-    "BLOCK",
-    "BLOOD",
-    "BOARD",
-    "BRAIN",
-    "BREAD",
-    "BREAK",
-    "BROWN",
-    "BUYER",
-    "CAUSE",
-    "CHAIN",
-    "CHAIR",
-    "CHEST",
-    "CHIEF",
-    "CHILD",
-    "CHINA",
-    "CLAIM",
-    "CLASS",
-    "CLOCK",
-    "COACH",
-    "COAST",
-    "COURT",
-    "COVER",
-    "CREAM",
-    "CRIME",
-    "CROSS",
-    "CROWD",
-    "CROWN",
-    "CYCLE",
-    "DANCE",
-    "DEATH",
-    "DEPTH",
-    "DOUBT",
-    "DRAFT",
-    "DRAMA",
-    "DREAM",
-    "DRESS",
-    "DRINK",
-    "DRIVE",
-    "EARTH",
-    "ENEMY",
-    "ENTRY",
-    "ERROR",
-    "EVENT",
-    "FAITH",
-    "FAULT",
-    "FIELD",
-    "FIGHT",
-    "FINAL",
-    "FLOOR",
-    "FOCUS",
-    "FORCE",
-    "FRAME",
-    "FRANK",
-    "FRONT",
-    "FRUIT",
-    "GLASS",
-    "GRANT",
-    "GRASS",
-    "GREEN",
-    "GROUP",
-    "GUIDE",
-    "HEART",
-    "HENRY",
-    "HORSE",
-    "HOTEL",
-    "HOUSE",
-    "IMAGE",
-    "INDEX",
-    "INPUT",
-    "ISSUE",
-    "JAPAN",
-    "JONES",
-    "JUDGE",
-    "KNIFE",
-    "LAURA",
-    "LAYER",
-    "LEVEL",
-    "LEWIS",
-    "LIGHT",
-    "LIMIT",
-    "LUNCH",
-    "MAJOR",
-    "MARCH",
-    "MATCH",
-    "METAL",
-    "MODEL",
-    "MONEY",
-    "MONTH",
-    "MOTOR",
-    "MOUTH",
-    "MUSIC",
-    "NIGHT",
-    "NOISE",
-    "NORTH",
-    "NOVEL",
-    "NURSE",
-    "OFFER",
-    "ORDER",
-    "OTHER",
-    "OWNER",
-    "PANEL",
-    "PAPER",
-    "PARTY",
-    "PEACE",
-    "PETER",
-    "PHASE",
-    "PHONE",
-    "PIECE",
-    "PILOT",
-    "PITCH",
-    "PLACE",
-    "PLANE",
-    "PLANT",
-    "PLATE",
-    "POINT",
-    "POUND",
-    "POWER",
-    "PRESS",
-    "PRICE",
-    "PRIDE",
-    "PRIZE",
-    "PROOF",
-    "QUEEN",
-    "RADIO",
-    "RANGE",
-    "RATIO",
-    "REPLY",
-    "RIGHT",
-    "RIVER",
-    "ROUND",
-    "ROUTE",
-    "RUGBY",
-    "SCALE",
-    "SCENE",
-    "SCOPE",
-    "SCORE",
-    "SENSE",
-    "SHAPE",
-    "SHARE",
-    "SHEEP",
-    "SHEET",
-    "SHIFT",
-    "SHIRT",
-    "SHOCK",
-    "SIGHT",
-    "SIMON",
-    "SKILL",
-    "SLEEP",
-    "SMILE",
-    "SMITH",
-    "SMOKE",
-    "SOUND",
-    "SOUTH",
-    "SPACE",
-    "SPEED",
-    "SPITE",
-    "SPORT",
-    "SQUAD",
-    "STAFF",
-    "STAGE",
-    "START",
-    "STATE",
-    "STEAM",
-    "STEEL",
-    "STOCK",
-    "STONE",
-    "STORE",
-    "STUDY",
-    "STUFF",
-    "STYLE",
-    "SUGAR",
-    "TABLE",
-    "TASTE",
-    "TERRY",
-    "THEME",
-    "THING",
-    "TITLE",
-    "TOTAL",
-    "TOUCH",
-    "TOWER",
-    "TRACK",
-    "TRADE",
-    "TRAIN",
-    "TREND",
-    "TRIAL",
-    "TRUST",
-    "TRUTH",
-    "UNCLE",
-    "UNION",
-    "UNITY",
-    "VALUE",
-    "VIDEO",
-    "VISIT",
-    "VOICE",
-    "WASTE",
-    "WATCH",
-    "WATER",
-    "WHILE",
-    "WHITE",
-    "WHOLE",
-    "WOMAN",
-    "WORLD",
-    "YOUTH",
-  ];
+  const [charsInfo, setCharsInfo] = useState({
+    notInTheWord: [],
+    inTheCorrectPosition: [],
+    inTheWordWrongPosition: [],
+  });
+  const [words] = useState(wordsLib);
 
   useEffect(() => {
-    //select word
-
     const selectedWord = words[Math.floor(Math.random() * words.length)];
     setSelected(selectedWord);
-
-    //WORDS USED
   }, []);
 
   const deleteLastCharCurrentWord = () => {
@@ -238,6 +241,9 @@ function Wordle() {
   };
 
   const addCharToCurrentWord = (char) => {
+    if (currentWord.length === selected.length) {
+      return;
+    }
     setCurrentWord((prev) => prev + char);
   };
 
@@ -245,6 +251,49 @@ function Wordle() {
     if (currentWord.length < selected.length) {
       Swal.fire("Too Short");
       return;
+    }
+
+    //chars info
+    for (let i = 0; i < currentWord.length; i++) {
+      //if correct position
+      if (currentWord[i] === selected[i]) {
+        setCharsInfo((prev) => {
+          return {
+            ...prev,
+            inTheCorrectPosition: [
+              ...prev.inTheCorrectPosition,
+              currentWord[i],
+            ],
+          };
+        });
+
+        continue;
+      }
+
+      //if in word
+      if (selected.includes(currentWord[i])) {
+        setCharsInfo((prev) => {
+          return {
+            ...prev,
+            inTheWordWrongPosition: [
+              ...prev.inTheWordWrongPosition,
+              currentWord[i],
+            ],
+          };
+        });
+
+        continue;
+      } else {
+        //if not in world
+        setCharsInfo((prev) => {
+          return {
+            ...prev,
+            notInTheWord: [...prev.notInTheWord, currentWord[i]],
+          };
+        });
+
+        continue;
+      }
     }
 
     if (currentWord === selected) {
@@ -265,6 +314,26 @@ function Wordle() {
     setIsOver(false);
     setCurrentWord("");
     setWordsUsed([]);
+    setCharsInfo({
+      notInTheWord: [],
+      inTheCorrectPosition: [],
+      inTheWordWrongPosition: [],
+    });
+  };
+
+  const share = () => {
+    const data = wordsUsed.map(
+      (word) => getSquaresResult(word, selected) + "\n"
+    );
+
+    let str = `
+      Wordle Madeline & Junior \n 
+      ${data.join("")}\n
+      \n
+      Play on httsp://madelineandjunior.info/activities
+      `;
+
+    navigator.share({ title: "My result", text: str });
   };
 
   return (
@@ -280,11 +349,12 @@ function Wordle() {
               The word was <b>{selected}</b>
             </p>
             {wordsUsed[wordsUsed.length - 1] === selected && <p>You won! 🏆</p>}
+            <Result wordsUsed={wordsUsed} selected={selected} />
             <div style={{ marginTop: 10, marginBottom: 10 }}>
               <button style={{ marginRight: 7 }} onClick={resetGame}>
                 Try another word
               </button>
-              <button>Share Result</button>
+              <button onClick={share}>Share Result</button>
             </div>
           </div>
         ) : (
@@ -297,6 +367,7 @@ function Wordle() {
         )}
       </div>
       <KeyBoard
+        charsInfo={charsInfo}
         setWordsUsed={setWordsUsed}
         deleteLastCharCurrentWord={deleteLastCharCurrentWord}
         addCharToCurrentWord={addCharToCurrentWord}
@@ -367,10 +438,17 @@ const KeyBoard = ({
   deleteLastCharCurrentWord,
   addCharToCurrentWord,
   submitCurrentWord,
+  charsInfo,
 }) => {
   const row1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
   const row2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
   const row3 = ["Z", "X", "C", "V", "B", "N", "M"];
+
+  const getBackground = (key) => {
+    if (charsInfo.inTheCorrectPosition.includes(key)) return "#79b851";
+    if (charsInfo.inTheWordWrongPosition.includes(key)) return "#f3c237";
+    if (charsInfo.notInTheWord.includes(key)) return "#a4aec4";
+  };
 
   return (
     <div className={styles.keyBoard}>
@@ -378,6 +456,7 @@ const KeyBoard = ({
         {row1.map((key, index) => {
           return (
             <div
+              style={{ background: getBackground(key) }}
               key={index}
               className={styles.key}
               onClick={() => addCharToCurrentWord(key)}
@@ -391,6 +470,7 @@ const KeyBoard = ({
         {row2.map((key, index) => {
           return (
             <div
+              style={{ background: getBackground(key) }}
               key={index}
               className={styles.key}
               onClick={() => addCharToCurrentWord(key)}
@@ -402,11 +482,12 @@ const KeyBoard = ({
       </div>
       <div className={styles.keyBoardRow}>
         <div className={styles.key} onClick={deleteLastCharCurrentWord}>
-          {"<-"}
+          <FaBackspace />
         </div>
         {row3.map((key, index) => {
           return (
             <div
+              style={{ background: getBackground(key) }}
               key={index}
               className={styles.key}
               onClick={() => addCharToCurrentWord(key)}
@@ -419,6 +500,37 @@ const KeyBoard = ({
           {"ENTER"}
         </div>
       </div>
+    </div>
+  );
+};
+
+const getSquaresResult = (word, selected) => {
+  let str = "";
+
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === selected[i]) {
+      str = str + "🟩";
+      continue;
+    }
+    if (selected.includes(word[i])) {
+      str = str + "🟨";
+      continue;
+    }
+    if (!selected.includes(word[i])) {
+      str = str + "⬜";
+      continue;
+    }
+  }
+
+  return str;
+};
+
+const Result = ({ wordsUsed, selected }) => {
+  return (
+    <div>
+      {wordsUsed.map((word) => (
+        <p>{getSquaresResult(word, selected)}</p>
+      ))}
     </div>
   );
 };
