@@ -171,7 +171,7 @@ function Registry({ data }) {
       </p>
       <p style={{ fontSize: 22 }}>Thank you!</p>
       <p style={{ fontSize: 22, marginTop: 20, fontWeight: "bold" }}>
-        Ship to: 987 Smith Ave. Harrisonburg VA 22802
+        You may ship to: 987 Smith Ave. Harrisonburg VA 22802
       </p>
 
       <div
