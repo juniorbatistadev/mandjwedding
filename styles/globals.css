@@ -8,6 +8,16 @@ html {
   padding: 0px;
 }
 
+button {
+  padding: 7px;
+  background: #505a46;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 a {
   margin: 0px 5px;
   color: #505a46;
