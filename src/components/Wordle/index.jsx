@@ -528,8 +528,8 @@ const getSquaresResult = (word, selected) => {
 const Result = ({ wordsUsed, selected }) => {
   return (
     <div>
-      {wordsUsed.map((word) => (
-        <p>{getSquaresResult(word, selected)}</p>
+      {wordsUsed.map((word, index) => (
+        <p key={index}>{getSquaresResult(word, selected)}</p>
       ))}
     </div>
   );
