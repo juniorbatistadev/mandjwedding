@@ -327,10 +327,10 @@ function Wordle() {
     );
 
     let str = `
-      Wordle Madeline & Junior \n 
+      Wordle Madeline & Junior\n 
       ${data.join("")}\n
       \n
-      Play on httsp://madelineandjunior.info/activities
+      Play on https://madelineandjunior.info/activities
       `;
 
     navigator.share({ title: "My result", text: str });
