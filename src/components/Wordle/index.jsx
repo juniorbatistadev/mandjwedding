@@ -55,18 +55,30 @@ const KeyBoard = () => {
   return (
     <div className={styles.keyBoard}>
       <div className={styles.keyBoardRow}>
-        {row1.map((key) => {
-          return <div className={styles.key}>{key}</div>;
+        {row1.map((key, index) => {
+          return (
+            <div key={index} className={styles.key}>
+              {key}
+            </div>
+          );
         })}
       </div>
       <div className={styles.keyBoardRow}>
-        {row2.map((key) => {
-          return <div className={styles.key}>{key}</div>;
+        {row2.map((key, index) => {
+          return (
+            <div key={index} className={styles.key}>
+              {key}
+            </div>
+          );
         })}
       </div>
       <div className={styles.keyBoardRow}>
-        {row3.map((key) => {
-          return <div className={styles.key}>{key}</div>;
+        {row3.map((key, index) => {
+          return (
+            <div key={index} className={styles.key}>
+              {key}
+            </div>
+          );
         })}
       </div>
     </div>
