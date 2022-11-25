@@ -57,10 +57,7 @@ function Party() {
             <p className={styles.job}>Bestman</p>
           </div>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
-            />
+            <img className={styles.avatar} src="/party/caleb.jpeg" />
             <p className={styles.name}>Caleb Despain </p>
             <p className={styles.job}>Groomsmen</p>
           </div>
@@ -70,10 +67,7 @@ function Party() {
             <p className={styles.job}>Groomsmen</p>
           </div>
           <div className={styles.person}>
-            <img
-              className={styles.avatar}
-              src="https://www.mensweddingstyle.com/wp-content/uploads/2021/06/linen-suit-1.jpg"
-            />
+            <img className={styles.avatar} src="/party/breylon.jpg" />
             <p className={styles.name}>Breylon Miller</p>
             <p className={styles.job}>Groomsmen</p>
           </div>
