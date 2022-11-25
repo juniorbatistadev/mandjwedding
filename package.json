@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "push": "next lint && git push origin main"
+    "push": "next lint && git add . && git commit -m \" $m \" & git push origin main"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",

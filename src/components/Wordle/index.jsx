@@ -234,7 +234,7 @@ function Wordle() {
   useEffect(() => {
     const selectedWord = words[Math.floor(Math.random() * words.length)];
     setSelected(selectedWord);
-  }, []);
+  }, [words]);
 
   const deleteLastCharCurrentWord = () => {
     setCurrentWord((prev) => prev.slice(0, -1));
