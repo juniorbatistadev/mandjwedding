@@ -43,11 +43,11 @@ function Party() {
             <p className={styles.job}>Bridemaid</p>
           </div>
 
-          <div className={styles.person}>
+          {/* <div className={styles.person}>
             <img className={styles.avatar} src="/party/joana.jpg" />
             <p className={styles.name}>Joanna Erwin</p>
             <p className={styles.job}>Bridemaid</p>
-          </div>
+          </div> */}
         </div>
         <div className={styles.section + " " + styles.groommen}>
           <h2 className={styles.sectionTitle}>Groomsmen</h2>

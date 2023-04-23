@@ -23,7 +23,7 @@ import { CgMailOpen } from "react-icons/cg";
 import { RiLiveLine } from "react-icons/ri";
 
 export default function Home() {
-  let date = new Date("2023-04-23");
+  let date = new Date("2023-08-12");
   let date2 = new Date(Date.now());
 
   let difference = date.getTime() - date2.getTime();
@@ -155,7 +155,7 @@ export default function Home() {
             &quot;name&quot;:&quot;Madeline and Junior Wedding&quot;,
             &quot;description&quot;:&quot;Madeline and Junior are starting their
             lives together.&quot;, &quot;startDate&quot;:&quot;2023-04-23&quot;,
-            &quot;endDate&quot;:&quot;2023-04-23&quot;,
+            &quot;endDate&quot;:&quot;2023-08-12&quot;,
             &quot;startTime&quot;:&quot;13:05&quot;,
             &quot;endTime&quot;:&quot;18:00&quot;,
             &quot;location&quot;:&quot;STANARDSVILLE, VA&quot;,

@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <header>
         <p className={styles.title}>Madeline & Junior</p>
       </header>
-      <div className={styles.postHeader}>April 23rd • Stanardsville, VA</div>
+      <div className={styles.postHeader}>August 12th • Stanardsville, VA</div>
       <Menu />
       <div className={styles.content}>{children}</div>
     </div>
