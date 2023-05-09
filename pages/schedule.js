@@ -41,6 +41,15 @@ function Schedule() {
           <p className={styles.name}>Send Off</p>
         </div>
       </div>
+      <p>
+        <a
+          href="https://www.visitharrisonburgva.com/dining-2/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h2>Harrisonburg Dinner Options 🍽️</h2>
+        </a>
+      </p>
       <Slider />
     </div>
   );

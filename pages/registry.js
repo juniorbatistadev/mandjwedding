@@ -70,22 +70,26 @@ function Item({ item }) {
           src={Array.isArray(item.images) ? item.images[0] : item.images}
         />
       ) : null}
-      <button
-        style={{
-          marginTop: 20,
-          padding: 10,
-          borderRadius: 10,
-          border: "none",
-          background: checked ? "#ddd" : "#505a46",
-          color: checked ? "#444" : "#fff",
-          fontSize: 17,
-          cursor: checked ? "auto" : "pointer",
-        }}
-        disabled={checked}
-        onClick={handleClick}
-      >
-        {checked ? "Bought" : "Mark as Bought"}
-      </button>
+
+      {item.name !== "Gift Cards" && (
+        <button
+          style={{
+            marginTop: 20,
+            padding: 10,
+            borderRadius: 10,
+            border: "none",
+            background: checked ? "#ddd" : "#505a46",
+            color: checked ? "#444" : "#fff",
+            fontSize: 17,
+            cursor: checked ? "auto" : "pointer",
+          }}
+          disabled={checked}
+          onClick={handleClick}
+        >
+          {checked ? "Bought" : "Mark as Bought"}
+        </button>
+      )}
+
       <div style={{ marginTop: 20 }}>
         {item.amazonLink && (
           <a target="_blank" rel="noreferrer" href={item.amazonLink}>

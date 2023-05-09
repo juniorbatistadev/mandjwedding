@@ -21,6 +21,7 @@ import { GiDirectionSign } from "react-icons/gi";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { CgMailOpen } from "react-icons/cg";
 import { RiLiveLine } from "react-icons/ri";
+import { MdOutlineLocalActivity } from "react-icons/md";
 
 export default function Home() {
   let date = new Date("2023-08-12");
@@ -205,6 +206,10 @@ export default function Home() {
         <div className={styles.iconOption}>
           <RiLiveLine />
           <Link href={"/livestream"}>Livestream</Link>
+        </div>
+        <div className={styles.iconOption}>
+          <MdOutlineLocalActivity />
+          <Link href={"/activities"}>Activities</Link>
         </div>
       </div>
       <div
