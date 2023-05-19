@@ -22,9 +22,9 @@ function Menu() {
       <li className={router.pathname == "/directions" ? styles.active : ""}>
         <Link href="/directions">Directions</Link>
       </li>
-      <li className={router.pathname == "/rsvp" ? styles.active : ""}>
+      {/* <li className={router.pathname == "/rsvp" ? styles.active : ""}>
         <Link href="/rsvp">RSVP</Link>
-      </li>
+      </li> */}
       <li className={router.pathname == "/registry" ? styles.active : ""}>
         <Link href="/registry">Registry</Link>
       </li>
