@@ -9,16 +9,12 @@ function Schedule() {
       <Title text="Schedule" />
       <div style={{ marginBottom: 60, marginTop: 30 }}>
         <div className={styles.event}>
-          <p className={styles.time}>1:30 pm</p>
+          <p className={styles.time}>2:00 pm</p>
           <p className={styles.name}>Ceremony begins</p>
         </div>
         <div className={styles.event}>
-          <p className={styles.time}>1:50 pm</p>
+          <p className={styles.time}>2:40 pm</p>
           <p className={styles.name}>Ceremony concludes</p>
-        </div>
-        <div className={styles.event}>
-          <p className={styles.time}>2:00 pm</p>
-          <p className={styles.name}>Social Hour</p>
         </div>
         <div className={styles.event}>
           <p className={styles.time}>3:00 pm</p>
@@ -29,11 +25,11 @@ function Schedule() {
           <p className={styles.name}>Toast</p>
         </div>
         <div className={styles.event}>
-          <p className={styles.time}>4:10 pm</p>
+          <p className={styles.time}>4:15 pm</p>
           <p className={styles.name}>Cake Cutting</p>
         </div>
         <div className={styles.event}>
-          <p className={styles.time}>4:15 pm</p>
+          <p className={styles.time}>4:20 pm</p>
           <p className={styles.name}>First Dance</p>
         </div>
         <div className={styles.event}>
