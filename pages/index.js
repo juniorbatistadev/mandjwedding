@@ -95,7 +95,7 @@ export default function Home() {
             tickets, and learned to maneuver the joys and challenges that come
             with long distance relationships. The past couple years have
             included long, difficult months of diagnosis and treatment, awaiting
-            a slow-moving visa (it took X months!), loss of a brother, and
+            a slow-moving visa (it took 20 months!), loss of a brother, and
             discovering how hard it is to be away from someone so special in the
             difficult, mundane, and happy. However, we have also learned the
             importance of being intentional in our communication, finding unique
