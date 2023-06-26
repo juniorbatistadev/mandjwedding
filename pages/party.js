@@ -29,12 +29,12 @@ function Party() {
           </div>
           <div className={styles.person}>
             <img className={styles.avatar} src="/party/jaima.jpg" />
-            <p className={styles.name}>Jaima DeWitt</p>
+            <p className={styles.name}>Jaima Cole</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
           <div className={styles.person}>
             <img className={styles.avatar} src="/party/ana.jpg" />
-            <p className={styles.name}>Anna Bower</p>
+            <p className={styles.name}>Anna Beatty</p>
             <p className={styles.job}>Bridemaid</p>
           </div>
           <div className={styles.person}>
