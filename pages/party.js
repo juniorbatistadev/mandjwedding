@@ -1,5 +1,4 @@
-import React from "react";
-import Title from "../src/components/Title";
+import React from "react";import Title from "../src/components/Title";
 import styles from "../styles/party.module.css";
 import dakota from "../assets/images/bm.jpg";
 import marya from "../assets/images/bm2.jpg";
@@ -61,11 +60,11 @@ function Party() {
             <p className={styles.name}>Caleb Despain </p>
             <p className={styles.job}>Groomsmen</p>
           </div>
-          <div className={styles.person}>
+          {/* <div className={styles.person}>
             <img className={styles.avatar} src="/party/branden.jpg" />
             <p className={styles.name}>Branden Dahlberg</p>
             <p className={styles.job}>Groomsmen</p>
-          </div>
+          </div> */}
           <div className={styles.person}>
             <img className={styles.avatar} src="/party/breylon.jpg" />
             <p className={styles.name}>Breylon Miller</p>
